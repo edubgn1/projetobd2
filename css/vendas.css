@@ -1,0 +1,229 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8; /* Cor de fundo azul claro */
+    color: #333;
+    padding: 20px;
+}
+
+/* Título da página */
+h2 {
+    text-align: center;
+    color: #2196f3; /* Azul claro */
+    margin-bottom: 20px;
+}
+
+/* Formulário de pesquisa */
+form {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do formulário */
+    align-items: center; /* Alinha os itens na vertical */
+    margin-bottom: 20px;
+    gap: 10px; /* Espaço entre o campo de texto e o botão */
+    width: 100%; /* Garantir que o formulário ocupe toda a largura */
+}
+
+/* Campo de entrada de texto */
+form input[type="text"] {
+    padding: 10px;
+    width: 250px; /* Largura do campo de pesquisa */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center; /* Centraliza o texto dentro do campo */
+}
+
+/* Botão de pesquisa */
+form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #2196f3; /* Azul claro */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Efeito hover no botão */
+form button:hover {
+    background-color: #1976d2; /* Azul um pouco mais escuro */
+}
+
+/* Contêiner de produtos */
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exibe 3 colunas */
+    gap: 20px; /* Espaço entre os cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o contêiner na horizontal */
+    justify-items: center; /* Centraliza os itens dentro de cada coluna */
+    padding: 20px 0; /* Espaçamento acima e abaixo */
+}
+
+/* Estilo dos Cards dos Produtos */
+.produto-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    background-color: #e3f2fd; /* Azul muito claro para o hover */
+}
+
+.produto-card h3 {
+    color: #2196f3; /* Azul claro */
+    font-size: 18px;
+}
+
+.produto-card p {
+    margin: 10px 0;
+}
+
+/* Estilo do campo de quantidade */
+.quantidade-container {
+    margin-top: 10px;
+}
+
+/* Estilo do botão "Fazer Venda" */
+button[type="submit"] {
+    display: block; /* Garantir que o botão fique em uma linha própria */
+    margin-top: 30px; /* Mais espaço acima */
+    padding: 8px 15px;
+    background-color: #2196f3; /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px; /* Botão menor */
+    cursor: pointer;
+    width: auto;
+    text-align: center;
+    margin-left: auto; /* Garante que o botão fique à direita */
+    margin-right: auto; /* Centraliza o botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #1976d2; /* Azul um pouco mais escuro */
+}
+
+/* Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #2196f3; /* Azul claro */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #1976d2; /* Azul mais escuro */
+}
+
+.pagination a:hover {
+    background-color: #1565c0; /* Azul ainda mais escuro */
+}
+
+/* Responsividade: Ajustar para telas menores */
+@media (max-width: 768px) {
+    .produtos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos-container {
+        grid-template-columns: 1fr; /* 1 coluna para telas pequenas */
+    }
+
+    form input[type="text"] {
+        width: 200px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        margin-right: 0; /* Remove a margem direita */
+    }
+}
+
+/* Estilo para o botão Voltar */
+button[type="button"] {
+    background-color: #f44336; /* Cor de fundo vermelha */
+    color: white; /* Texto branco */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de pointer para indicar que é clicável */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeitos de transição */
+    margin-top: 20px; /* Espaço acima do botão */
+    display: inline-block; /* Para o botão ficar alinhado com outros elementos */
+    text-align: center; /* Centralizar o texto */
+}
+
+button[type="button"]:hover {
+    background-color: #e53935; /* Cor de fundo vermelha mais escura no hover */
+    transform: scale(1.05); /* Leve aumento no tamanho do botão ao passar o mouse */
+}
+
+button[type="button"]:focus {
+    outline: none; /* Remove o contorno ao focar */
+}
+
+/* Container do formulário de pesquisa */
+.form-pesquisa {
+    display: flex; /* Deixa input e botão lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Aumenta o espaço entre o input e o botão */
+    position: relative; /* Garante que não sobreponha outros elementos */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do formulário */
+}
+
+/* Ajustar o campo de pesquisa */
+.form-pesquisa input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px; /* Define uma largura fixa */
+}
+
+/* Ajustar o botão de pesquisa */
+.form-pesquisa button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bb5;
+    color: white;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+.form-pesquisa button:hover {
+    background-color: #005f8a;
+}
+
+.produtos-container {
+    margin-top: 20px; /* Aumenta o espaço entre o formulário e os produtos */
+}

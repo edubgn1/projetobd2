@@ -1,0 +1,107 @@
+/* Resetando margens e padding para um padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral para o body */
+body {
+    background: linear-gradient(to top, #e6f7ff, #bcc2f0); 
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para centralizar verticalmente */
+}
+
+/* Container para a página de login */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+/* Estilo do título */
+h2 {
+    font-size: 32px;
+    color: #000000; /* Azul claro */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #69b1fa; /* Azul claro para os campos */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f1faff; /* Azul bem claro */
+    transition: border 0.3s;
+}
+
+/* Efeito ao focar no campo de entrada */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3385ff; /* Azul mais forte ao focar */
+    outline: none;
+    background-color: #ffffff; /* Fica branco quando o campo estiver em foco */
+}
+
+/* Botão de login */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4da6ff; /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse no botão de login */
+button[type="submit"]:hover {
+    background-color: #3385ff; /* Azul mais forte */
+}
+
+/* Link para o redirecionamento */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4da6ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #3385ff; /* Cor mais forte no hover */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,129 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Azul claro */
+    color: #333;
+    padding: 0;
+    height: 100vh; /* Altura total da janela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Contêiner do formulário */
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%; /* Garante que o contêiner ocupe até 600px, mas pode ser menor */
+}
+
+/* Título do formulário */
+h3 {
+    text-align: center;
+    color: #007bb5; /* Cor azul clara */
+    margin-bottom: 20px;
+}
+
+/* Estilo para os campos de entrada */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bb5;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    border-color: #007bb5;
+    outline: none;
+}
+
+/* Botões */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão de Adicionar Produto */
+.btn-submit {
+    background-color: #007bb5;
+    color: white;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #005f8a;
+}
+
+/* Botão de Voltar */
+.btn-voltar {
+    background-color: #f0f0f0;
+    color: #007bb5;
+    margin-top: 10px;
+}
+
+.btn-voltar:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+        width: 90%;
+    }
+}
+
+/* Estilos para mensagens */
+.mensagem {
+    position: fixed; /* Fixa no topo da tela */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 80%;
+}
+
+/* Mensagem de erro */
+.mensagem.erro {
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+}
+
+/* Mensagem de sucesso */
+.mensagem.sucesso {
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+}
+
